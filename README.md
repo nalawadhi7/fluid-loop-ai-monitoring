@@ -9,8 +9,7 @@ This project demonstrates the design and implementation of an intelligent monito
 
 ## Physical Fluid Loop & Fault Scenarios
 A closed-loop fluid system was designed and assembled using a pump, reservoir, valves, and piping. To evaluate system behavior under realistic conditions, controlled fault scenarios were introduced, including leaks, flow blockages, and pump-related faults. These scenarios provided the foundation for testing monitoring and diagnostic strategies.
-![physicalloop](fluid loop.png
-)
+![FTA](fluidloop.png)
 
 
 ## Sensor Data Acquisition (Arduino)
@@ -18,7 +17,9 @@ Temperature and flow sensors were connected to an Arduino microcontroller to col
 
 ## Fault Tree Analysis (FTA)
 Fault Tree Analysis (FTA) was used to model potential failure modes and their causal relationships. Detected anomalies in sensor readings were mapped to likely root causes, enabling explainable fault diagnosis rather than black-box anomaly detection.
+
 ![FTA](FT-1.png)
+
 ![FTA](FT-2.png)
 
 
@@ -27,7 +28,7 @@ A decision tree classifier was trained using the collected sensor data to classi
 
 ## AI-Powered Monitoring Website
 A centralized web platform was developed to visualize real-time sensor data and system status. The website integrates dashboards, automated alerts, machine learning predictions, and fault tree reasoning to provide clear, operator-friendly insights and recommended actions.
-![web](Screenshot 2026-02-02 225126.png
+![web](Screenshot2026-02-02225126.png
 )
 
 
