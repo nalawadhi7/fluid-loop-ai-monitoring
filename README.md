@@ -19,6 +19,11 @@ Focus areas: Industrial Monitoring • Explainable Fault Diagnosis • Machine L
 ## Tech Stack
 
 ## Screenshots / Posters
+![Project Poster](poster1.jpeg)
+![Project Poster](poster2.jpeg)
+![Project Poster](poster3.jpeg)
+![Project Poster](poster4.jpeg)
+
 
 ## Results
 
