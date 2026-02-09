@@ -1,103 +1,171 @@
-# AI-Driven Fluid Loop Monitoring, Fault Detection & Diagnosis System
 
-An end-to-end intelligent monitoring and fault diagnosis system designed around a physical fluid loop. The project combines real-time sensor data acquisition (Arduino), Fault Tree Analysis (FTA) for explainable root-cause reasoning, machine learning–based state classification, and an AI-powered web platform that turns raw readings into actionable insights through dashboards, alerts, and operator-friendly guidance.
+# 🌊 AI-Driven Fluid Loop Monitoring, Fault Detection & Diagnosis System
 
-Focus areas: Industrial Monitoring • Explainable Fault Diagnosis • Machine Learning • Human-Centered Dashboard Design
+An end-to-end intelligent monitoring and fault diagnosis system built around a **physical fluid loop**.  
+This project combines **real-time sensor data acquisition (Arduino)**, **Fault Tree Analysis (FTA)** for explainable diagnosis, a **Decision Tree ML model** for state classification, and an **AI-powered web platform** that turns raw readings into clear dashboards, alerts, and operator-friendly guidance.
 
-## Project Overview
-This project demonstrates the design and implementation of an intelligent monitoring system for a physical fluid loop. The goal was to combine real-time sensing, explainable fault analysis, and machine learning within a single platform that supports fast and informed operator decision-making.
+**Focus Areas:** Industrial Monitoring • Explainable Diagnosis • Machine Learning • Human-Centered Dashboard Design
 
-## Physical Fluid Loop & Fault Scenarios
-A closed-loop fluid system was designed and assembled using a pump, reservoir, valves, and piping. To evaluate system behavior under realistic conditions, controlled fault scenarios were introduced, including leaks, flow blockages, and pump-related faults. These scenarios provided the foundation for testing monitoring and diagnostic strategies.
-![FTA](fluidloop.png)
+---
 
+## ✨ Project Highlights
+- ✅ Real-time sensor monitoring (temperature + flow)
+- ✅ ML-based classification (Normal / Leak / Blockage / Pump Fault)
+- ✅ Explainable root-cause reasoning using FTA
+- ✅ Operator dashboard with alerts + actionable steps
+- ✅ Interactive failure tree viewer (zoom + fit)
+- ✅ AI assistant for troubleshooting support
+- ✅ Simulation mode for testing fault scenarios
 
-## Sensor Data Acquisition (Arduino)
-Temperature and flow sensors were connected to an Arduino microcontroller to collect real-time system data. Measurements were recorded under both normal and faulty operating conditions and labeled accordingly to support analysis and machine learning model training.
+---
 
-## Fault Tree Analysis (FTA)
-Fault Tree Analysis (FTA) was used to model potential failure modes and their causal relationships. Detected anomalies in sensor readings were mapped to likely root causes, enabling explainable fault diagnosis rather than black-box anomaly detection.
+## 🔎 Project Overview
+This project demonstrates the design and implementation of an intelligent monitoring system for a physical fluid loop.  
+The goal was to combine **real-time sensing**, **explainable fault analysis**, and **machine learning** within a single platform that supports fast and informed operator decision-making.
 
-![FTA](FT-1.png)
+---
 
-![FTA](FT-2.png)
+## 🔧 Physical Fluid Loop & Fault Scenarios
+A closed-loop fluid system was designed and assembled using a pump, reservoir, valves, and piping.  
+To evaluate the system under realistic conditions, controlled fault scenarios were introduced, including **leaks**, **flow blockages**, and **pump-related faults**.
 
+<p align="center">
+  <img src="fluidloop.png" width="700" alt="Fluid loop diagram"/>
+</p>
 
-## Machine Learning Model (Decision Tree)
-A decision tree classifier was trained using the collected sensor data to classify system states such as normal operation, leaks, blockages, and pump faults. The model was selected for its interpretability, allowing predictions to be easily understood and validated.
+---
 
-## AI-Powered Monitoring Website
+## 📡 Sensor Data Acquisition (Arduino)
+Temperature and flow sensors were connected to an Arduino microcontroller to collect real-time system data.  
+Measurements were recorded under both **normal** and **faulty** operating conditions and labeled to support machine learning training.
 
+---
+
+## 🌳 Fault Tree Analysis (FTA)
+Fault Tree Analysis (FTA) was used to model failure modes and their causal relationships.  
+Detected anomalies in sensor readings were mapped to likely root causes, enabling **explainable diagnosis** instead of black-box anomaly detection.
+
+<p align="center">
+  <img src="FT-1.png" width="700" alt="FTA diagram 1"/>
+</p>
+
+<p align="center">
+  <img src="FT-2.png" width="700" alt="FTA diagram 2"/>
+</p>
+
+---
+
+## 🤖 Machine Learning Model (Decision Tree)
+A Decision Tree classifier was trained using the collected sensor data to classify states such as:
+- Normal operation  
+- Leak  
+- Blockage  
+- Pump fault  
+
+The model was chosen for its interpretability, allowing predictions to be easily understood and validated.
+
+---
+
+## 🖥️ AI-Powered Monitoring Website
 
 ### 🧩 Interactive Fluid Loop Visualization
-![Fluid Loop View](webb1.png)
+<p align="center">
+  <img src="webb1.png" width="900" alt="Interactive fluid loop view"/>
+</p>
 
-This view shows a live visual model of the fluid loop, including pipes, valves, tanks, and sensors.  
-It helps users clearly understand how the system is connected and how fluid flows through it.
+A live visual model of the fluid loop (pipes, valves, tanks, sensors).  
+Helps users quickly understand system layout and flow paths.
 
 ---
 
 ### 🧾 Component Details Panel
-![Component Details](webb6.png)
+<p align="center">
+  <img src="webb6.png" width="900" alt="Component details panel"/>
+</p>
 
-When a component such as a tank is selected, its basic information is displayed, including volume, level, material, and inspection dates.  
-This allows operators to quickly understand the condition and properties of each system component.
+Clicking a component shows key details (volume, level, material, inspection dates).  
+This supports fast checks and easier system understanding.
 
 ---
 
 ### 📊 Real-Time System Status
-
-The dashboard displays live system readings such as flow rate, pressure, and temperature.  
-It also shows the overall system status (stable, overheat risk, or failure) to support fast decision-making.
+The dashboard displays live readings such as:
+- **Flow (L/min)**
+- **Pressure (kPa)**
+- **Temperature (°C)**
+- **System status** (Stable / Overheat Risk / Pump Failure)
 
 ---
 
 ### 🚨 Alerts & Notifications
-![Alerts Panel](alert.png)
+<p align="center">
+  <img src="alert.png" width="900" alt="Alerts panel"/>
+</p>
 
-The alerts panel highlights abnormal system behavior such as over-temperature, pump failure, or possible blockages.  
-Each alert includes a timestamp and severity level to help users prioritize issues.
+Highlights abnormal behavior such as over-temperature, pump failure, or possible blockages.  
+Each alert includes a timestamp + severity to help prioritize actions.
 
 ---
 
-### 🌳 Failure Tree Analysis
-![Failure Tree](webb3,png)
+### 🌳 Failure Tree Viewer (Explainable Diagnosis)
+<p align="center">
+  <img src="webb3.png" width="900" alt="Failure tree viewer"/>
+</p>
 
-Each alert is linked to a failure tree view that explains possible causes step by step.  
-This helps users understand why a problem occurred instead of only seeing the alert.
+Each alert links to a failure tree view showing possible causes step-by-step.  
+Includes zoom controls (in/out + fit) for easy navigation.
 
 ---
 
 ### 🧠 AI Assistant for Troubleshooting
-![AI Assistant](webb5.png)
+<p align="center">
+  <img src="webb5.png" width="900" alt="AI assistant"/>
+</p>
 
-The built-in assistant allows users to ask questions like “What should I do if there is a leak?”.  
-The system responds with clear troubleshooting steps based on sensor data and system behavior.
+Operators can ask questions like: **“What should I do if I have a leak?”**  
+The assistant provides clear troubleshooting steps based on system behavior and sensor patterns.
 
 ---
 
 ### ▶️ Simulation Mode
-
 Simulation mode allows users to test different fault scenarios and observe how the system responds.  
-This makes the platform useful for training, demonstrations, and system analysis.
+Useful for demonstrations, training, and validating alert logic.
 
-## Tech Stack
-- Arduino (sensor data acquisition)
-- Machine Learning (Decision Tree classification)
-- Fault Tree Analysis (FTA)
-- React / Next.js (frontend)
-- Node.js (backend)
-- SQLite (data storage)
-- AI Chatbot integration
+---
 
-## Posters
-![Project Poster](poster1.jpeg)
-![Project Poster](poster2.jpeg)
-![Project Poster](poster3.jpeg)
-![Project Poster](poster4.jpeg)
+## 🧰 Tech Stack
+- **Arduino** (sensor data acquisition)
+- **Machine Learning** (Decision Tree classification)
+- **Fault Tree Analysis (FTA)**
+- **React / Next.js** (frontend)
+- **Node.js** (backend)
+- **SQLite** (data storage)
+- **AI chatbot integration**
 
-## Results
-The system successfully demonstrated real-time fault detection and diagnosis. Automated alerts and AI-assisted explanations improved system transparency and reduced the time required to identify and respond to faults.
+---
 
-## Limitations & Future Work
-The dataset size was limited due to hardware constraints. Future work could include additional fault scenarios, predictive maintenance capabilities, and long-term data logging to further enhance system performance.
+## 🖼️ Posters
+<p align="center">
+  <img src="poster1.jpeg" width="420" alt="Poster 1"/>
+  <img src="poster2.jpeg" width="420" alt="Poster 2"/>
+</p>
+<p align="center">
+  <img src="poster3.jpeg" width="420" alt="Poster 3"/>
+  <img src="poster4.jpeg" width="420" alt="Poster 4"/>
+</p>
+
+---
+
+## ✅ Results
+The system successfully demonstrated real-time fault detection and diagnosis.  
+Automated alerts and AI-assisted explanations improved transparency and reduced the time required to identify and respond to faults.
+
+---
+
+## 🚀 Limitations & Future Work
+- Dataset size was limited due to hardware constraints  
+- Future improvements could include:
+  - More fault scenarios  
+  - Predictive maintenance features  
+  - Long-term data logging and trend detection  
+  - More sensors for higher accuracy  
